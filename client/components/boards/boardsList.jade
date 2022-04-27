@@ -30,6 +30,7 @@ template(name="boardList")
             input#resetBtn(type="button" value="{{_ 'filter-clear'}}")
 
     ul.board-list.clearfix.js-boards
+    if currentUser.isAdmin
       li.js-add-board
         a.board-list-item.label(title="{{_ 'add-board'}}")
           | {{_ 'add-board'}}
